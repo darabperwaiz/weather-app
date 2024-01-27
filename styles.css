@@ -1,0 +1,214 @@
+/* Write your desired css here */
+/* Write your desired css here */
+:root {
+    --font-color-primary: #3f1196;
+    --font-color-sec: white;
+}
+
+* {
+    padding: 0;
+    margin: 0;
+    box-sizing: border-box;
+}
+
+body {
+    /* background: rgb(53, 104, 247); */
+    font-family: Roboto;
+    background-image: url(/assets/images/bg.jpg);
+    background-repeat: no-repeat;
+    background-position: center;
+    background-size: cover;    
+}
+
+#weather-container {
+    background-color: rgba(255, 255, 255, 0.512);
+    width: 400px;
+    min-height: calc(100vh - 60px);
+    margin: 30px auto;
+    padding: 30px;
+    border-radius: 10px;
+    display: flex;
+    flex-direction: column;
+    gap: 10px;
+    border: 2px solid rgb(255, 255, 255);
+    box-shadow: 0 0 5px rgba(122, 122, 122, 0.404);
+}
+
+.weather-header {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    position: relative;
+}
+.location {
+    display: flex;
+    justify-content: center;
+    width: 100%;
+    margin-top: 10px;
+}
+.location p {
+    color: var(--font-color-primary);
+    display: flex;
+    align-items: baseline;
+    font-size: 20px;
+}
+
+.cityName {
+    font-weight: 500;
+    margin-left: 5px;
+    font-size: 20px;
+    text-transform: uppercase;
+}
+
+.country {
+    font-size: 16px;
+    margin-left: 3px;
+}
+
+
+#date-time {
+    display: flex;
+    gap: 10px;
+    justify-content: center;
+    font-size: 14px;
+    color: var(--font-color-primary);
+}
+
+
+
+#location-form{
+    display: flex;
+    align-items:flex-end;
+    justify-content:flex-end;
+    width: 100%;
+    transition-duration: 0.2s;
+}
+
+
+#location-input {
+    width: 100%;
+    border: 2px solid var(--font-color-primary);
+    padding: 5px 10px;
+    font-size: 14px;
+    border-radius: 10px;
+    background: rgb(255, 255, 255);
+    outline: none;
+    height: 45px;
+    margin-right: -7px;
+    transition-duration: 0.05s;
+}
+
+#location-form button {
+    background: none;
+    outline: none;
+    border: none;
+    position: absolute;
+    right: 5px;
+    top: 12px;
+    font-size: 20px;
+}
+
+
+#weather-data {
+    text-align: center;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    gap: 20px;
+}
+
+.temp-info {
+    position: relative;
+    width: 100%;
+}
+
+.temperature {
+    font-size: 160px;
+    font-weight: 900;
+    background: linear-gradient(200deg,#7aa0ff, var(--font-color-primary));
+    background-clip:text;
+    -webkit-text-fill-color: transparent;
+}
+
+.weather-info {
+    position: absolute;
+    left: 65px;
+    bottom: 0;
+    font-weight: 700;
+    font-size: 22px;
+    color: var(--font-color-primary);
+}
+
+.weather-icon {
+    position: absolute;
+    width: 100px;
+    bottom: -15px;
+    right: 50px;
+}
+
+.other-info {
+    display: flex;
+    background-color: rgba(255, 255, 255, 0.647);
+    width: 100%;
+    justify-content: space-around;
+    padding: 20px;
+    border-radius: 50px;
+    margin-top: 40px;
+    border: 2px solid white;
+}
+
+.feels-like, .humidity, .wind, .sunrise, .sunset {
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    gap: 4px;
+    color: var(--font-color-primary);
+}
+
+.other-info i {
+    font-size: 15px;
+}
+
+.other-info .middle {
+    font-weight: 700;
+}
+
+.other-info  .bottom {
+    font-size: 13px;
+    font-weight: 500;
+}
+
+.sun-info {
+    display: flex;
+    width: 100%;
+    justify-content: space-evenly;
+}
+
+.sun-time {
+    font-weight: 500;
+}
+
+.sun-title {
+    font-size: 14px;
+    font-weight: 500;
+}
+
+.alert {
+    font-size: 10px;
+    color: #555;
+}
+
+
+
+/* Media Query */
+
+@media only screen and (max-width: 480px) {
+    #weather-container {
+        margin: 0 auto;
+        border-radius: 0;
+        width: 100%;
+        border: none;
+    }
+}
